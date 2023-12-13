@@ -1,6 +1,9 @@
-const map = L.map('map').setView([51.505, -0.09], 13);
+const interactiveMap = L.map('map', {
+	center: [48.868672, 2.342130],
+	zoom: 12,
+});
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    minZoom: '15',
+}).addTo(interactiveMap)
